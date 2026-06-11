@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", "Inter", sans-serif;
+  --font-serif: "Amiri", "Georgia", serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  direction: rtl;
+  text-align: right;
+  background-color: #F8FAFC; /* Slate 50 */
+}
+
+/* Custom styles for glowing animations and active sessions */
+.morning-glow {
+  box-shadow: 0 10px 30px -5px rgba(245, 158, 11, 0.15);
+}
+
+.evening-glow {
+  box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.15);
+}
+
+.night-glow {
+  box-shadow: 0 10px 30px -5px rgba(109, 40, 217, 0.15);
+}
+
+/* Quranic text custom alignment & spacing */
+.quran-text {
+  font-family: var(--font-serif);
+  line-height: 2.2;
+}
+
+/* Bento aesthetic custom support classes */
+.bento-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+}
+
+.bento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+}
+
+.bento-banner {
+  background-size: 150% 150%;
+  animation: bentoGradient 8s ease infinite;
+}
+
+@keyframes bentoGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
